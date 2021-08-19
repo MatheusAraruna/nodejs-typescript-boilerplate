@@ -4,7 +4,8 @@
     "server:dev": "ts-node-dev src/shared/infra/http/server.ts",
     "server:hml": "",
     "server:prod": "",
-    "start":"node dist/shared/infra/http/server.js"
+    "start": "node dist/shared/infra/http/server.js",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -26,9 +27,19 @@
     "@types/debug": "^4.1.7",
     "@types/express": "^4.17.13",
     "@types/node": "^16.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "debug": "^4.3.2",
     "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
     "log4js": "^6.3.0",
+    "prettier": "2.3.2",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.3.5"
   }
