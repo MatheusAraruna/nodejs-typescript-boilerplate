@@ -1,11 +1,12 @@
 {
   "scripts": {
     "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
-    "server:dev": "ts-node-dev src/shared/infra/http/server.ts",
+    "server:dev": "ts-node-dev -r tsconfig-paths/register src/shared/infra/http/server.ts",
     "server:hml": "",
     "server:prod": "",
     "start": "node dist/shared/infra/http/server.js",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -13,8 +14,10 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
+    "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
-    "tsyringe": "^4.6.0"
+    "tsyringe": "^4.6.0",
+    "typeorm": "^0.2.37"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.8",
