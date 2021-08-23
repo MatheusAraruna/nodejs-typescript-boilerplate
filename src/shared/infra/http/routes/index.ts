@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import discordRouter from '@modules/discord/infra/http/routes';
-
 const router = Router();
 
-router.use(discordRouter);
+router.use('/', (_, res) => {
+  return res.json({ hello: 'hello' });
+});
 
 export default router;
