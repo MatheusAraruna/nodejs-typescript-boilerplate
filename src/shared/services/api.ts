@@ -1,6 +1,15 @@
 import axios, { AxiosInstance } from 'axios';
-import discord from '@config/discord';
 
-const api = axios.create();
+export default class HttpClient {
+  private client: AxiosInstance;
 
-export default api;
+  constructor() {
+    this.client = axios.create({
+      baseURL: 'some url',
+    });
+  }
+
+  public api(): AxiosInstance {
+    return this.client;
+  }
+}
